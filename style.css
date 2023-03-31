@@ -21,11 +21,135 @@ body {
   margin: 0 auto;
 }
 
+.title {
+  margin-bottom: 30px;
+  font-size: 3rem;
+  color: white;
+}
+
 .task-input {
   margin: 0;
+  margin-bottom: 30px;
   width: 100%;
   height: 50px;
   padding: 8px;
   border: none;
   border-radius: 18px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.task-item {
+  display: flex;
+  /* flex-direction: row-reverse; */
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px;
+  min-height: 50px;
+  height: auto;
+  border: 2px solid;
+  border-radius: 18px;
+  border-color: white;
+  color: white;
+  font-size: 2rem;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.container:hover .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #4ee1a0;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.task-wrapper {
+  text-align: left;
+  width: 60%;
+  /* flex: 1; */
+  margin-left: 15px;
+  /* overflow-wrap: break-word; */
+  word-wrap: break-word;
+  hyphens: auto;
+  height: auto;
+}
+
+.task-wrapper .task-text {
+  height: fit-content;
+}
+
+.edit-delete-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+}
+
+.fa-solid {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.delete-icon {
+  margin-left: 12px;
 }

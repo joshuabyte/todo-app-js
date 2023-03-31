@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Todo App</title>
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/72ceea1c5d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="main-container">
-        <input id="taskInput" class="task-input" type="text">
+      <h1 class="title">My Task List</h1>
+      <input id="taskInput" class="task-input" type="text" placeholder="Enter Task" maxlength="50" />
+      <div id="taskList" class="taskList"></div>
     </div>
     <script src="script.js"></script>
   </body>
